@@ -9,7 +9,7 @@ const ArticleDetails = () => {
   const [article, setArticle] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/api/articles/${id}`)
+    axios.get(`https://s-l8ac-srinu-s-projects.vercel.app/api/articles/${id}`)
       .then(res => setArticle(res.data))
       .catch(err => console.error(err));
   }, [id]);
