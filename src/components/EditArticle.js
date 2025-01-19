@@ -8,7 +8,7 @@ const EditArticle = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/api/articles/${id}`)
+    axios.get(`https://s-l8ac-srinu-s-projects.vercel.app/api/articles/${id}`)
       .then(res => setArticle(res.data))
       .catch(err => console.error(err));
   }, [id]);
@@ -23,7 +23,7 @@ const EditArticle = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.put(`http://localhost:3000/api/articles/${id}`, article)
+    axios.put(`https://s-l8ac-srinu-s-projects.vercel.app/api/articles/${id}`, article)
       .then(() => {
         alert('Article updated successfully');
         navigate(`/article/${id}`); // Redirect to the article details page
