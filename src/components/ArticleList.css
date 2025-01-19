@@ -1,0 +1,133 @@
+/* General container styling for article list */
+.article-list {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fa;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Title Styling */
+.article-list h1 {
+  font-size: 28px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Create new article button styling */
+.create-article-btn {
+  display: inline-block;
+  background-color: #0078d4;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  align-self: center;
+}
+
+.create-article-btn:hover {
+  background-color: #005bb5;
+}
+
+/* Styling the list of articles */
+.article-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Article list item styling */
+.article-list li {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  gap: 15px;
+  align-items: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.article-list li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Article's title styling */
+.article-list h3 {
+  font-size: 20px;
+  color: #333;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Styling the article's image to make it smaller */
+.article-list img {
+  width: 150px; /* Set a fixed width for the image */
+  height: 150px; /* Set a fixed height to maintain the aspect ratio */
+  object-fit: cover; /* Ensures that the image covers the space without distortion */
+  border-radius: 8px; /* Optional: adds rounded corners to the image */
+  margin-top: 10px; /* Adds some space between the image and text */
+  display: block; /* Ensures the image is treated as a block element */
+}
+
+/* Container for Edit and Delete buttons */
+.article-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Edit button styling */
+.edit-btn {
+  background-color: #ff9800;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.edit-btn:hover {
+  background-color: #e68900;
+}
+
+/* Delete button styling */
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+.delete-btn:focus {
+  outline: none;
+}
+
+.delete-btn:active {
+  background-color: #c62828;
+}
