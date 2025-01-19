@@ -7,14 +7,14 @@ const ArticleList = () => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/articles')
+    axios.get('https://s-l8ac-srinu-s-projects.vercel.app/api/articles')
       .then(res => setArticles(res.data))
       .catch(err => console.error(err));
   }, []);
 
   const deleteArticle = (id) => {
     if (window.confirm('Are you sure you want to delete this article?')) {
-      axios.delete(`http://localhost:3000/api/articles/${id}`)
+      axios.delete(`https://s-l8ac-srinu-s-projects.vercel.app/api/articles/${id}`)
         .then(() => {
           alert('Article deleted successfully');
           setArticles(articles.filter(article => article._id !== id)); // Remove deleted article from the list
@@ -35,7 +35,7 @@ const ArticleList = () => {
           <li key={article._id}>
             <Link to={`/article/${article._id}`}>
               <h3>{article.title}</h3>
-              {article.image && <img src={`http://localhost:3000/${article.image}`} alt={article.title} />}
+              {article.image && <img src={`https://s-l8ac-srinu-s-projects.vercel.app/${article.image}`} alt={article.title} />}
             </Link>
             <div className="article-actions">
               <Link to={`/edit/${article._id}`} className="edit-btn">Edit</Link>
