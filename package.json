@@ -2,7 +2,7 @@
   "name": "app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://s-l8ac-srinu-s-projects.vercel.app/"
+  "homepage": "https://s-drab-zeta.vercel.app",
   "dependencies": {
     "axios": "^1.7.9",
     "cra-template": "1.2.0",
@@ -16,7 +16,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
 
   },
   "eslintConfig": {
@@ -41,4 +43,3 @@
     "gh-pages": "^6.3.0"
   }
 }
-
