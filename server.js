@@ -7,7 +7,7 @@ const articleRoutes = require('./routes/articleRoutes');
 
 dotenv.config();
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 mongoose.connect("mongodb://127.0.0.1:27017/mernapp")
   .then(() => console.log('MongoDB connected'))
