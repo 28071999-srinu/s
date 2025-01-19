@@ -23,7 +23,7 @@ const CreateArticle = () => {
       formData.append('image', image);
     }
 
-    axios.post('http://localhost:3000/api/articles', formData, {
+    axios.post('https://s-l8ac-srinu-s-projects.vercel.app/api/articles', formData, {
       headers: { 'Content-Type': 'multipart/form-data' },
     })
       .then(() => alert('Article created!'))
